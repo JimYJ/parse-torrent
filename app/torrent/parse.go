@@ -43,6 +43,7 @@ func Parse(b []byte) {
 		log.Println(err)
 		return
 	}
+
 	// err = bencode.DecodeBytes(b, &torrent)
 	err = bencode.Unmarshal(b, &val)
 	if err != nil {
